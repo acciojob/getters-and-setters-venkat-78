@@ -1,1 +1,43 @@
 /*  your css code here. If applicable */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person, Student, and Teacher Styles</title>
+
+    <style>
+        /* Styles for the Person class */
+        .person {
+            font-weight: bold;
+            color: blue;
+        }
+
+        /* Styles for the Student class */
+        .student {
+            color: green;
+        }
+
+        /* Styles for the Teacher class */
+        .teacher {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="person">
+        <p>John Doe</p>
+    </div>
+
+    <div class="person student">
+        <p>Alice Smith</p>
+    </div>
+
+    <div class="person teacher">
+        <p>Professor Johnson</p>
+    </div>
+
+</body>
+</html>
+

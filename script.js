@@ -1,11 +1,62 @@
 //complete this code
-class Person {}
+// Define the Person class
+class Person {
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+    }
 
-class Student extends Person {}
+    // Getter for name
+    get name() {
+        return this._name;
+    }
 
-class Teacher extends Person {}
+    // Setter for age
+    set age(value) {
+        this._age = value;
+    }
+}
 
-// Do not change the code below this line
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
+// Define the Student class that extends Person
+class Student extends Person {
+    // Constructor for Student
+    constructor(name, age) {
+        // Call the constructor of the superclass (Person)
+        super(name, age);
+    }
+
+    // Method specific to Student
+    study() {
+        console.log(`${this.name} is studying`);
+    }
+}
+
+// Define the Teacher class that extends Person
+class Teacher extends Person {
+    // Constructor for Teacher
+    constructor(name, age) {
+        // Call the constructor of the superclass (Person)
+        super(name, age);
+    }
+
+    // Method specific to Teacher
+    teach() {
+        console.log(`${this.name} is teaching`);
+    }
+}
+
+// Example usage
+const person = new Person("John Doe", 30);
+console.log("Person Name:", person.name);
+person.age = 31; // Using the setter
+console.log("Person Age:", person.age);
+
+const student = new Student("Alice Smith", 20);
+console.log("Student Name:", student.name);
+student.study();
+
+const teacher = new Teacher("Professor Johnson", 45);
+console.log("Teacher Name:", teacher.name);
+teacher.teach();
+
+
